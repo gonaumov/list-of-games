@@ -1,0 +1,10 @@
+1. build responsive html5 page based on provided designs. (should be responsive)
+
+2. Create javascript search functionality (search by game name)
+
+3. Make filtering functionality (all-new-top, should filter games based on attribute added to the game)
+
+note:
+for css, you can use whatever you like (sass, less, css, etc.);
+for js, you can use whatever you like (jquery, native js, typescript, etc.);
+feel free to create react app, if you like :)
