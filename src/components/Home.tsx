@@ -11,7 +11,7 @@ const Home: React.FC<Props> = ({games}) => {
     return (
         <div className='games-wrapper'>
             {games.map((g, index) => {
-               return (<div className={classnames({
+               return (<div className={classnames('box', {
                 'double-box': g.x === 2 && g.y === 2
                })} key={'games' + index}>
                <img alt={g.image} src={'./images/' + g.image}/>
