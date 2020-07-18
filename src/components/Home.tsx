@@ -9,8 +9,8 @@ interface Props {
 
 const Home: React.FC<Props> = ({games}) => {
     return (
-        <main className='gallery'>
-            <ul className="gallery__list">
+        <main className='games'>
+            <ul className="games__list">
             {games.map((g, index) => {
                 return (<li key={'games-list-' + index} className={classnames('box', {
                     'double-box': g.x === 2 && g.y === 2

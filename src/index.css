@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main.gallery {
+main.games {
   width: 90%;
   margin: 0px auto;
   padding: 0;
@@ -15,7 +15,7 @@ main.gallery {
   text-align: center;
 }
 
-.gallery > .gallery__list {
+.games > .games__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   grid-template-rows: repeat(7, 160px);
@@ -25,22 +25,22 @@ main.gallery {
   list-style: none;
 }
 
-.gallery figure {
+.games figure {
   margin: 0;
   padding: 0;
 }
 
-.gallery > .gallery__list .double-box {
+.games > .games__list .double-box {
   grid-column: span 2;
   grid-row: span 2;
 }
 
-.gallery > .gallery__list > li > figure {
+.games > .games__list > li > figure {
   height: 100%;
   width: 100%;
 }
 
-.gallery > .gallery__list > li > figure > img {
+.games > .games__list > li > figure > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
