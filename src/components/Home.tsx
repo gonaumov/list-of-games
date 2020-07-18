@@ -1,6 +1,7 @@
 import React from 'react'
 import {getGames} from "../selectors/getGames";
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 
 interface Props {
     games: Array<Game>
@@ -8,11 +9,13 @@ interface Props {
 
 const Home: React.FC<Props> = ({games}) => {
     return (
-        <div>
+        <div className='games-wrapper'>
             {games.map((g, index) => {
-               return (<span key={'games' + index}>{g.name}
+               return (<div className={classnames({
+                'double-box': g.x === 2 && g.y === 2
+               })} key={'games' + index}>
                <img alt={g.image} src={'./images/' + g.image}/>
-               </span>)
+               </div>)
             })}
         </div>
     )

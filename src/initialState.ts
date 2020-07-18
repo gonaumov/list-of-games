@@ -8,6 +8,14 @@ export const initialState: State = {
         image: 'hotline.png'
     },
         {
+            name: 'Jumanji',
+            x: 2,
+            y: 2,
+            top: true,
+            new: false,
+            image: 'jumanji.png'
+        },
+        {
             name: 'Fruit Spin',
             x: 1,
             y: 1,
@@ -126,14 +134,6 @@ export const initialState: State = {
             top: true,
             new: false,
             image: '3-hit-pay-pulse.png'
-        },
-		{
-            name: 'Jumanji',
-            x: 2,
-            y: 2,
-            top: true,
-            new: false,
-            image: 'jumanji.png'
         }
 		],
     filter: 'all',
