@@ -76,6 +76,11 @@ header h1 {
     display: inline-block;
     margin: 1%;
     user-select: none;
+	color: #5b6770;
+}
+
+.all-active, .new-active, .top-active {
+	color: #00a9e0;
 }
 
 .all {
