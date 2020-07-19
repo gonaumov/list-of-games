@@ -28,7 +28,7 @@ const Home: React.FC<Props & DispatchProps> = ({games, filter, search}) => {
                     'double-box': g.x === 2 && g.y === 2
                 })}>
                     <figure>
-                        <img alt={g.image} src={'./images/' + g.image}/>
+                        <img title={g.name} alt={g.image} src={'./images/' + g.image}/>
                     </figure>
                 </li>);
             })}
