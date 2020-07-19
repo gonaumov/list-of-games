@@ -16,13 +16,25 @@ interface DispatchProps {
 
 const Home: React.FC<Props & DispatchProps> = ({games, filter, search}) => {
     const [searchIsActive, setSearchIsActive] = useState(false);
+    const [activeFilter, setActiveFilter] = useState<filter>('all')
+
+    const filterHandler = (filterValue: filter) => {
+        setActiveFilter(filterValue);
+        filter(filterValue);
+    }
 
     return (<>
         <header>
             <h1>Slots</h1>
-            <span className='all' onClick={() => filter('all')}>ALL</span>
-        <span className='new' onClick={() => filter('new')}>NEW</span>
-        <span  className='top' onClick={() => filter('top')}>TOP</span>
+            <span className={classnames('all', {
+                'all-active': activeFilter === 'all'
+            })} onClick={() => filterHandler('all')}>ALL</span>
+        <span className={classnames('new', {
+            'new-active': activeFilter === 'new'
+        })} onClick={() => filterHandler('new')}>NEW</span>
+        <span  className={classnames('top', {
+            'top-active': activeFilter === 'top'
+        })} onClick={() => filterHandler('top')}>TOP</span>
         <input onFocus={() => setSearchIsActive(true)}
                onBlur={() => setSearchIsActive(false)}
                className={classnames('search', {
