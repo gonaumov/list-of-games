@@ -14,11 +14,13 @@ interface DispatchProps {
     filter: typeof filterAction
 }
 
-const Home: React.FC<Props & DispatchProps> = ({games, filter}) => {
+const Home: React.FC<Props & DispatchProps> = ({games, filter, search}) => {
     return (<>
         Slots <span onClick={() => filter('all')}>ALL</span>
         <span onClick={() => filter('new')}>NEW</span>
         <span onClick={() => filter('top')}>TOP</span>
+        <input type='text' onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) =>
+            event.currentTarget.value.length > 0 ? search(event.currentTarget.value) : search(null)}/>
         <main className='games'>
             <ul className="games__list">
             {games.map((g, index) => {
