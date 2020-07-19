@@ -22,6 +22,7 @@ main.games {
     grid-auto-flow: dense;
     margin: 0px auto;
     list-style: none;
+	justify-items: start;
 }
 
 .games figure {
@@ -43,6 +44,16 @@ main.games {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.games > .games__list > li.box img {
+	max-width: 160px;
+	max-height: 160px;
+}
+
+.games > .games__list > li.double-box img {
+	max-width: 320px;
+	max-height: 320px;
 }
 
 header {
