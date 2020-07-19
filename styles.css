@@ -82,12 +82,24 @@ header h1 {
     background-image: url("images/all.png");
 }
 
+.all-active {
+    background-image: url("images/all-active.png");
+}
+
 .new {
     background-image: url("images/new.png");
 }
 
+.new-active {
+    background-image: url("images/new-active.png");
+}
+ 
 .top {
     background-image: url("images/top.png");
+}
+
+.top-active {
+    background-image: url("images/top-active.png");
 }
 
 .search {
@@ -109,7 +121,12 @@ header h1 {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    .all, .new, .top {
+    .all, 
+	.all-active, 
+	.new, 
+	.new-active, 
+	.top, 
+	.top-active {
         display: inline-block;
     }
 }
