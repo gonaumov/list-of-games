@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {getGames} from "../selectors/getGames";
 import {connect, MapDispatchToProps} from 'react-redux'
 import classnames from 'classnames'
@@ -15,13 +15,22 @@ interface DispatchProps {
 }
 
 const Home: React.FC<Props & DispatchProps> = ({games, filter, search}) => {
+    const [searchIsActive, setSearchIsActive] = useState(false);
+
     return (<>
         <header>
             <h1>Slots</h1>
             <span className='all' onClick={() => filter('all')}>ALL</span>
         <span className='new' onClick={() => filter('new')}>NEW</span>
         <span  className='top' onClick={() => filter('top')}>TOP</span>
-        <input className='search' type='text' onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) =>
+        <input onFocus={() => setSearchIsActive(true)}
+               onBlur={() => setSearchIsActive(false)}
+               className={classnames('search', {
+                   'search-active': searchIsActive
+               })}
+               placeholder=' Search'
+               type='text'
+               onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) =>
             event.currentTarget.value.length > 0 ? search(event.currentTarget.value) : search(null)}/>
         </header>
         <main className='games'>

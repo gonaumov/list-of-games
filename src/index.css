@@ -64,6 +64,7 @@ header h1 {
   padding-top: 24px;
   display: inline-block;
   margin: 1%;
+  user-select: none;
 }
 
 .all {
@@ -80,7 +81,16 @@ header h1 {
 
 .search {
   height: 34px;
-  border-radius: 10px;
+  border-radius: 25px;
+  background-image: url("/images/magnifier.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.search-active {
+  outline-color: transparent;
+  background-color: #00a9e0;
+  background-image: none;
 }
 
 @media (max-width: 800px) {
