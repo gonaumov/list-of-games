@@ -3,16 +3,16 @@ export const initialState: State = {
         name: 'Hotline',
         x: 1,
         y: 1,
-        top: true,
-        new: false,
+        top: false,
+        new: true,
         image: 'hotline.png'
     },
         {
             name: 'Fruit Spin',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'fruit-spin.png'
         },
         {
@@ -20,7 +20,7 @@ export const initialState: State = {
             x: 2,
             y: 2,
             top: true,
-            new: false,
+            new: true,
             image: 'jumanji.png'
         },
 		{
@@ -35,8 +35,8 @@ export const initialState: State = {
             name: 'Day of the dead',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'day-of-the-dead.png'
         },
 		{
@@ -51,8 +51,8 @@ export const initialState: State = {
             name: 'Dr Jekyll & Mr Hyde',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'dr-jekyll&mr-hyde.png'
         },
 		{
@@ -67,8 +67,8 @@ export const initialState: State = {
             name: 'Aloha ! cluster rays',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'aloha.png'
         },
 		{
@@ -83,8 +83,8 @@ export const initialState: State = {
             name: 'Spinata grande',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'spinata-grande.png'
         },
 		{
@@ -99,8 +99,8 @@ export const initialState: State = {
             name: 'Fafa twins',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'fa-fa-twins.png'
         },
 		{
@@ -115,8 +115,8 @@ export const initialState: State = {
             name: 'Gonzos quest',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'smokin-hot-gems.png'
         },
 		{
@@ -132,15 +132,15 @@ export const initialState: State = {
             x: 2,
             y: 2,
             top: true,
-            new: false,
+            new: true,
             image: '3-hit-pay-pulse.png'
         },
 				{
             name: 'Spinata grande',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'spinata-grande.png'
         },
 		{
@@ -155,8 +155,8 @@ export const initialState: State = {
             name: 'Fafa twins',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'fa-fa-twins.png'
         },
 		{
@@ -171,8 +171,8 @@ export const initialState: State = {
             name: 'Gonzos quest',
             x: 1,
             y: 1,
-            top: false,
-            new: true,
+            top: true,
+            new: false,
             image: 'smokin-hot-gems.png'
         },
 				{

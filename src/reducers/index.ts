@@ -1,20 +1,46 @@
-import  * as actionTypes  from '../constants/ActionTypes'
-import { initialState } from '../initialState'
-import { Action } from 'redux'
+import * as actionTypes from '../constants/ActionTypes'
+import {initialState} from '../initialState'
+import {Action} from 'redux'
+import {isFilterAction, isSearchAction} from "../typeguards";
 
-interface GamesAction extends Action {
-   filter: filter
+export interface FilterAction extends Action {
+    filter: filter
 }
 
-export const reducer =  (state: State = initialState, action: GamesAction): State => {
+export interface SearchAction extends Action {
+    search: string | null
+}
+
+export const reducer = (state: State = initialState, action: FilterAction | SearchAction): State => {
     switch (action.type) {
         case actionTypes.SET_FILTER: {
-            const { filter } = action
+            if (isFilterAction(action)) {
+                const {filter} = action
+                return {
+                    ...state,
+                    filter
+                }
+            }
+
             return {
-                ...state,
-                filter
+                ...state
             }
         }
+
+        case actionTypes.SET_SEARCH: {
+            if (isSearchAction(action)) {
+                const {search} = action
+                return {
+                    ...state,
+                    search
+                }
+            }
+
+            return {
+                ...state
+            }
+        }
+
         default:
             return state
     }

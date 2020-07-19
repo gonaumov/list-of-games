@@ -10,7 +10,7 @@ interface Game {
 type filter = 'all' | 'top' | 'new'
 
 interface State {
-    games: Array<Game>
-    filter: filter
+    games: Array<Game>,
+    filter: filter,
     search: string | null
 }
